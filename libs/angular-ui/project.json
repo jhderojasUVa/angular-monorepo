@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/angular-ui/src",
+  "prefix": "angular-monorepo",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/angular-ui"],
+      "options": {
+        "jestConfig": "libs/angular-ui/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/angular-ui/**/*.ts",
+          "libs/angular-ui/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
